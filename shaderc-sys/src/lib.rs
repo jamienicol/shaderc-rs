@@ -166,6 +166,10 @@ extern "C" {
         options: *mut ShadercCompileOptions,
         auto_bind: bool,
     );
+    pub fn shaderc_compile_options_set_auto_map_locations(
+        options: *mut ShadercCompileOptions,
+        auto_map: bool,
+    );
     pub fn shaderc_compile_options_set_hlsl_io_mapping(
         options: *mut ShadercCompileOptions,
         hlsl_iomap: bool,

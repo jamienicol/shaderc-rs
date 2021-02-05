@@ -921,6 +921,13 @@ impl<'a> CompileOptions<'a> {
         }
     }
 
+    /// FIXME: add doc
+    pub fn set_auto_map_locations(&mut self, auto_map: bool) {
+        unsafe {
+            scs::shaderc_compile_options_set_auto_map_locations(self.raw, auto_map);
+        }
+    }
+
     /// Sets whether the compiler should use HLSL IO mapping rules for bindings.
     ///
     /// Defaults to false.
